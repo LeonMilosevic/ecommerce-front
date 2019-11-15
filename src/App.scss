@@ -1,0 +1,25 @@
+@import "./scss/variables.scss";
+@import "./scss/tabs.scss";
+@import "./scss/navbar.scss";
+@import "./scss/hero.scss";
+@import "./scss/breadcrumbs.scss";
+@import "./scss/forms";
+@import "./scss//account.scss";
+@import "./scss/home.scss";
+@import "./scss//global.scss";
+@import "./scss/product.scss";
+@import "./scss/shop.scss";
+@import "./scss//cart.scss";
+@import "./scss/braintreeUi.scss";
+
+// global styling
+* {
+  display: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $color-gray;
+  color: $color-gray-light;
+}

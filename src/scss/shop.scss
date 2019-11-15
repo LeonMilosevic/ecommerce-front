@@ -1,0 +1,208 @@
+.card-shop {
+  width: 100%;
+  height: 180px;
+  background-color: brown;
+  position: relative;
+  display: flex;
+}
+
+.shop-heading {
+  font-size: 40px;
+  color: $color-gray-light;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shop-sorting-div {
+  height: 30%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba($color: $color-black, $alpha: 0.4);
+  margin-top: auto;
+}
+
+.shop-dropdown-button {
+  margin-top: 10px;
+  width: 180px;
+  background-color: $color-gray-dark;
+  border: 0;
+  &:hover {
+    background-color: $color-blue-light;
+    color: $color-black;
+  }
+  &:active {
+    background-color: $color-gray-dark;
+  }
+}
+
+.show > .btn-primary.dropdown-toggle {
+  background-color: $color-gray-dark;
+  border: 0;
+}
+
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem transparent;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $color-gray-dark;
+  border: 0;
+}
+
+.shop-dropdown-custom {
+  width: 100%;
+  padding: 0 3px;
+  color: $color-gray-light;
+  max-height: 110px;
+  overflow-y: scroll;
+  background-color: $color-gray-dark;
+  &--item {
+    background-color: #bfbfbf5e;
+    color: #f2f2f0;
+  }
+}
+
+.shop-header-style-counter {
+  color: #595959;
+  font-size: 24px;
+}
+
+// checkbox
+.shop-dropdown-custom--item:first-child {
+  margin-top: 3%;
+}
+
+.checkbox-custom {
+  position: absolute;
+  right: 5%;
+  margin-top: 4%;
+  cursor: pointer;
+}
+
+.checkbox-custom-label {
+  font-size: 14px;
+  width: 100%;
+  color: $color-gray-light;
+  background-color: #bfbfbf5e;
+  margin-bottom: 3%;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-blue-light;
+    color: $color-gray-light;
+    transition: all 0.17s ease;
+  }
+  text-transform: capitalize;
+}
+
+.checkbox-active {
+  background-color: $color-blue-light;
+  color: $color-gray-light;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+}
+input[type="radio"] {
+  background: $color-blue-light;
+}
+.custom-price-span {
+  font-size: 12px;
+  &--1 {
+    float: left;
+  }
+  &--2 {
+    float: right;
+  }
+}
+
+.custom-range::-webkit-slider-thumb {
+  background: $color-blue-light;
+}
+
+.custom-range::-moz-range-thumb {
+  background: $color-blue-light;
+}
+
+.custom-range::-ms-thumb {
+  background: $color-blue-light;
+}
+// custom radio button
+.custom-radio-label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  padding-left: 2%;
+  font-size: 14px;
+  margin-bottom: 3%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-transform: capitalize;
+  &:hover {
+    cursor: pointer;
+    background-color: $color-blue-light;
+    color: $color-gray-light;
+    transition: all 0.17s ease;
+  }
+}
+
+.custom-radio-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom-radio-checkmark {
+  position: absolute;
+  top: 25%;
+  right: 4%;
+  height: 10px;
+  width: 10px;
+  background-color: $color-gray-light;
+  border-radius: 50%;
+}
+
+/* When the radio button is checked, add a blue background */
+.custom-radio-label input:checked ~ .custom-radio-checkmark {
+  background-color: $color-gray-light;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.custom-radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.custom-radio-label input:checked ~ .custom-radio-checkmark:after {
+  display: block;
+}
+
+.custom-radio-label .custom-radio-checkmark:after {
+  top: 50%;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: $color-blue-light;
+  transform: translate(-50%, -50%);
+}
+
+// end of checkbox

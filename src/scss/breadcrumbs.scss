@@ -1,0 +1,20 @@
+// breadcrumbs costomized bootstrap
+.breadcrumb {
+  border-radius: 0;
+  background-color: transparent;
+  padding: 0;
+  padding-left: 0.5%;
+  margin-top: 10px;
+}
+
+.breadcrumb-item {
+  padding: 0;
+  font-size: 14px;
+  & a {
+    text-transform: capitalize;
+    color: $color-gray-light;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+// end of breadrcrumbs costomized

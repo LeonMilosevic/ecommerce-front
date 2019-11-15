@@ -1,0 +1,205 @@
+.account-col-header {
+  background-color: $color-gray-dark;
+}
+.account-col-tabs {
+  background-color: $color-blue-light;
+  padding: 0;
+  margin: 0;
+}
+.account-col-content {
+  padding-right: 0;
+}
+.account-header-1 {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.account-header-2 {
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-top: -20px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: $color-gray-light;
+  color: $color-blue-light;
+}
+
+.nav-pills .nav-link,
+.nav-pills .show > .nav-link {
+  color: $color-gray-light;
+}
+
+.account-tab-div {
+  display: flex;
+  align-items: center;
+}
+
+.account-tabs-p {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  &--1 {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+  }
+  &--2 {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+  }
+}
+
+// acccount layout
+
+.layout-background {
+  background-color: $color-gray-light;
+  color: $color-black;
+  position: relative;
+}
+
+.account-layout-header {
+  font-size: 36px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.account-layout-subheader {
+  margin-top: -5px;
+  font-size: 16px;
+  color: $color-gray;
+}
+
+.account-layout-icon {
+  color: $color-gray-light;
+  position: relative;
+  top: 0%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  font-size: 64px;
+}
+
+.account-layout-background {
+  background-color: $color-blue-light;
+  height: 110px;
+  width: 110px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// account my details layout
+
+.account-my-details-label {
+  font-size: 12px;
+  color: $color-gray;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.account-my-details-input {
+  color: $color-black;
+  size: 16px;
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.account-my-details-input-email {
+  color: $color-black;
+  size: 16px;
+  padding: 0;
+}
+// acount form
+
+.form-control {
+  border: 1px solid $color-gray;
+  &:focus {
+    border-color: $color-gray;
+    box-shadow: 0 0 0 0.2rem rgba(132, 186, 205, 0.7);
+  }
+}
+// history card
+
+.account-history-card {
+  background-color: $color-blue-light;
+  height: 170px;
+  width: 94%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  &:last-child {
+    margin-bottom: 100px;
+  }
+}
+.account-history-card--grid {
+  display: grid;
+  margin-left: 1%;
+  height: 94%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5px;
+  width: 39%;
+  max-height: 100%;
+  justify-items: center;
+  align-self: center;
+}
+
+.account-history-card--grid_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-height: 100%;
+}
+
+.account-history-card--grid--img {
+  width: 100%;
+  max-height: 100%;
+
+  object-fit: cover;
+  position: top;
+  &:last-child {
+  }
+}
+
+.account-history-card--info_1 {
+  width: 30%;
+}
+
+.account-history-card--header {
+  font-size: 20px;
+  font-weight: 700;
+  color: $color-black;
+  margin-bottom: 0;
+}
+
+.account-history-card--sub-header {
+  font-size: 14px;
+  color: $color-gray-dark;
+}
+
+.account-icon-div {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  cursor: pointer;
+}
+
+.account-signout-icon {
+  font-size: 45px;
+  color: $color-red-light;
+  transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+}
+
+.account-signout-text {
+  font-size: 28px;
+  font-weight: 700;
+}

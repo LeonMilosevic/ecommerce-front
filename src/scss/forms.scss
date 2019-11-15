@@ -1,0 +1,31 @@
+.center {
+  text-align: center;
+  color: $color-black;
+}
+.form-width-custom {
+  width: 50%;
+}
+.custom-auth-form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-label-custom {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $color-gray-dark;
+}
+
+.password-link {
+  margin: 0 auto;
+  font-size: 14px;
+  color: $color-gray-dark;
+  &:hover {
+    color: $color-gray-dark;
+  }
+}
+
+.auth-redirect-p {
+  font-size: 14px;
+  color: $color-gray-dark;
+}
