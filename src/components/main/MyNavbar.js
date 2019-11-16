@@ -43,7 +43,7 @@ const MyNavbar = ({ history }) => {
 
   // when admin display
   const isAdmin = () => (
-    <Dropdown className="mx-3">
+    <Dropdown className="right-links">
       <Dropdown.Toggle as={Link} id="dropdown-custom-2" to="#!">
         <FaUserCircle style={{ fontSize: "26px" }} />
       </Dropdown.Toggle>
@@ -72,7 +72,7 @@ const MyNavbar = ({ history }) => {
   );
   // when not signed in display
   const notSignedIn = () => (
-    <Dropdown className="mx-3">
+    <Dropdown className="right-links">
       <Dropdown.Toggle as={Link} id="dropdown-custom-2" to="#!">
         <FaUserCircle style={{ fontSize: "26px" }} />
       </Dropdown.Toggle>
@@ -87,32 +87,49 @@ const MyNavbar = ({ history }) => {
           </Link>
         </div>
         <Dropdown.Divider />
-        <Dropdown.Item eventKey="1">
+        <li className="dropdown-item">
           <span className="dropdown-item-icons">
             <FaBackward />
           </span>
-          Return information
-        </Dropdown.Item>
-        <Dropdown.Item eventKey="2">
+          <span>
+            <Link className="jumbotron-link-no-style" to="/about">
+              Return information
+            </Link>
+          </span>
+        </li>
+        <li className="dropdown-item">
           <span className="dropdown-item-icons">
             <FaQuestionCircle />
           </span>
-          Help
-        </Dropdown.Item>
-        <Dropdown.Item eventKey="3">
+          <span>
+            <Link className="jumbotron-link-no-style" to="/about">
+              Help
+            </Link>
+          </span>
+        </li>
+        <li className="dropdown-item">
           <span className="dropdown-item-icons">
             <FaPhone />
           </span>
-          Contact us
-        </Dropdown.Item>
+          <span>
+            <Link className="jumbotron-link-no-style" to="/about">
+              Contact us
+            </Link>
+          </span>
+        </li>
         <Dropdown.Divider />
-        <Dropdown.Item className="dropdown-item-last" eventKey="4">
+        <li className="dropdown-item dropdown-item-last">
           <span className="dropdown-item-last--icon">
             <FaSuitcase />
           </span>
-          Work with us
+          <span>
+            <Link className="jumbotron-link-no-style" to="/about">
+              Work with us
+            </Link>
+          </span>
+
           <div className="dropdown-item-last--span">Join our team</div>
-        </Dropdown.Item>
+        </li>
       </Dropdown.Menu>
     </Dropdown>
   );
@@ -120,7 +137,7 @@ const MyNavbar = ({ history }) => {
 
   // when signed in display
   const signedIn = () => (
-    <Dropdown className="mx-3">
+    <Dropdown className="right-links">
       <Dropdown.Toggle as={Link} id="dropdown-custom-2" to="#!">
         <FaUserCircle style={{ fontSize: "26px" }} />
       </Dropdown.Toggle>
@@ -131,24 +148,32 @@ const MyNavbar = ({ history }) => {
           </span>
           Account
         </Dropdown.Item>
-        <Dropdown.Item eventKey="2">
+        <li className="dropdown-item">
           <span className="dropdown-item-icons">
             <FaShoppingBasket />
           </span>
-          Purchase history
-        </Dropdown.Item>
+          <span>
+            <Link className="jumbotron-link-no-style" to="/user/account">
+              Purchase history
+            </Link>
+          </span>
+        </li>
         <Dropdown.Item eventKey="3">
           <span className="dropdown-item-icons">
             <FaCreditCard />
           </span>
           Payment methods
         </Dropdown.Item>
-        <Dropdown.Item eventKey="3">
+        <li className="dropdown-item">
           <span className="dropdown-item-icons">
             <FaQuestionCircle />
           </span>
-          Help
-        </Dropdown.Item>
+          <span>
+            <Link className="jumbotron-link-no-style" to="/about">
+              Help
+            </Link>
+          </span>
+        </li>
         <Dropdown.Item
           onClick={() =>
             signout(() => {
@@ -163,10 +188,18 @@ const MyNavbar = ({ history }) => {
           Sign out
         </Dropdown.Item>
         <Dropdown.Divider />
-        <Dropdown.Item className="dropdown-item-last" eventKey="4">
-          Work with us
+        <li className="dropdown-item dropdown-item-last">
+          <span className="dropdown-item-last--icon">
+            <FaSuitcase />
+          </span>
+          <span>
+            <Link className="jumbotron-link-no-style" to="/about">
+              Work with us
+            </Link>
+          </span>
+
           <div className="dropdown-item-last--span">Join our team</div>
-        </Dropdown.Item>
+        </li>
       </Dropdown.Menu>
     </Dropdown>
   );
@@ -180,13 +213,13 @@ const MyNavbar = ({ history }) => {
         expand="lg"
         variant="dark"
       >
-        <Container>
+        <Container className="container-navbar">
           <Link to="/">
             <Navbar.Brand>Clothify</Navbar.Brand>
           </Link>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav>
+            <Nav className="navbar-home-icon">
               <Link style={isActive(history, "/")} to="/">
                 <FaHome style={{ fontSize: "26px" }} />
               </Link>
@@ -228,14 +261,14 @@ const MyNavbar = ({ history }) => {
             <Nav>
               <Link
                 style={isActive(history, "/wishlist")}
-                className="mx-3"
+                className="right-links"
                 to="/wishlist"
               >
                 <FaHeart style={{ fontSize: "26px", color: "#e95b4e" }} />
               </Link>
               <Link
                 style={isActive(history, "/cart")}
-                className="mx-3"
+                className="right-links"
                 to="/cart"
               >
                 <sup>

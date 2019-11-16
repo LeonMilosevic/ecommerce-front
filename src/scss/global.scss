@@ -22,6 +22,18 @@
   border: none;
   color: $color-gray-light;
   padding: 5px;
+  @media only screen and (max-width: 990px) {
+    width: 100%;
+  }
+}
+
+.shop-button-custom {
+  width: 20%;
+  margin: 0 1rem;
+  @media only screen and (max-width: 990px) {
+    width: 28%;
+    margin: 0 0.5rem;
+  }
 }
 
 .btn-searchbar {
@@ -37,6 +49,10 @@
   }
   &:active {
     border: transparent;
+  }
+  @media only screen and (max-width: 990px) {
+    position: absolute;
+    right: 11%;
   }
 }
 .moveLeft {
@@ -144,6 +160,10 @@
   height: 80%;
   background-color: transparent;
   z-index: 55555;
+  @media only screen and (max-width: 990px) {
+    width: 0%;
+    height: 0%;
+  }
 }
 
 .icon-custom {
@@ -164,6 +184,11 @@
   right: 0;
   background-color: $color-blue-light;
   color: $color-gray-light;
+  @media only screen and (max-width: 990px) {
+    position: fixed;
+    top: 25%;
+    right: 0;
+  }
 }
 
 .toast-custom--wish {
@@ -172,6 +197,11 @@
   right: 0;
   background-color: $color-red-light;
   color: $color-gray-light;
+  @media only screen and (max-width: 990px) {
+    position: fixed;
+    top: 25%;
+    right: 0;
+  }
 }
 // jumbotron
 .jumbotron-background {
@@ -287,8 +317,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media only screen and (max-width: 990px) {
+    margin-left: 20%;
+  }
 }
-
+.hide-footer {
+  @media only screen and (max-width: 990px) {
+    display: none;
+  }
+}
 .footer-social-icons {
   font-size: 28px;
   transition: all 0.5s ease;

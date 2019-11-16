@@ -35,7 +35,7 @@ const Account = () => {
             <p className="account-header-1 mt-1">Hello,</p>
             <p className="account-header-2">{name}</p>
           </Col>
-          <Col className="account-col-tabs" sm={4} md={4} lg={4}>
+          <Col className="account-col-tabs" sm={12} md={4} lg={4}>
             <Nav variant="pills" className="flex-column">
               <Nav.Item>
                 <Nav.Link eventKey="first">
@@ -94,7 +94,7 @@ const Account = () => {
               <span className="account-signout-text">Log out</span>
             </div>
           </Col>
-          <Col sm={8} md={8} lg={8} className="account-col-content">
+          <Col sm={12} md={8} lg={8} className="account-col-content">
             <Tab.Content>
               <Tab.Pane eventKey="first">
                 <AccountDetails />
@@ -115,7 +115,7 @@ const Account = () => {
   return (
     <div className="container">
       <Breadcrumb>
-        <LinkContainer to="/account">
+        <LinkContainer to="/user/account">
           <Breadcrumb.Item>account</Breadcrumb.Item>
         </LinkContainer>
       </Breadcrumb>

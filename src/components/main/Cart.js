@@ -177,7 +177,7 @@ const Cart = () => {
               </div>
             </div>
           </div>
-          <div className="col-4 col-sm-12 col-md-4 col-lg-4 col-xl-4 cart-items-checkout">
+          <div className="col-sm-12 col-md-4 col-lg-4 col-xl-4 cart-items-checkout">
             <Checkout />
           </div>
         </div>

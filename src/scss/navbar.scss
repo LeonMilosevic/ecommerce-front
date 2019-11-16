@@ -23,6 +23,14 @@
   top: 0;
   transform: rotate(45deg) translateX(0px) translateY(-7px);
   background-color: $color-gray-light;
+  @media only screen and (max-width: 990px) {
+    display: none;
+  }
+}
+.dropdownDiv {
+  @media only screen and (max-width: 990px) {
+    text-align: center;
+  }
 }
 
 .dropdownLink {
@@ -55,6 +63,9 @@
     }
     &:active {
       color: $color-blue-light;
+    }
+    @media only screen and (max-width: 990px) {
+      padding-left: 0;
     }
   }
   &-right {
@@ -141,7 +152,35 @@ a#dropdown-custom-2.dropdown-toggle {
 }
 
 // end of costomized bootstrap
+// search
+.search-bar {
+  height: 34px;
+  width: 588px !important;
+  border-radius: 20px !important;
+  border-color: rgb(28, 37, 42) !important;
+  @media only screen and (max-width: 990px) {
+    width: 100% !important;
+    margin: 2% 0;
+  }
+}
 
+.right-links {
+  margin: 0 1rem;
+  @media only screen and (max-width: 990px) {
+    margin: 2% 0;
+  }
+}
+.navbar-home-icon {
+  @media only screen and (max-width: 990px) {
+    display: none;
+  }
+}
+
+.container-navbar {
+  @media only screen and (max-width: 990px) {
+    text-align: center;
+  }
+}
 // search display
 .search-box {
   text-align: center;
@@ -176,6 +215,11 @@ a#dropdown-custom-2.dropdown-toggle {
       background-color: $color-blue-light;
       text-decoration: none;
     }
+  }
+  @media only screen and (max-width: 990px) {
+    top: 31%;
+    left: 56%;
+    width: 90%;
   }
 }
 // cart icon

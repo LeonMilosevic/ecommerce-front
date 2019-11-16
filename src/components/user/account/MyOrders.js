@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from "react";
 // import helpers
+import { Link } from "react-router-dom";
 import moment from "moment";
 // import context
 import UserContext from "../../../context/user/UserContext";
@@ -16,7 +17,7 @@ const MyOrders = () => {
   }, []);
 
   const userHistory = () =>
-    purchaseHistoryState.length > 0 && (
+    purchaseHistoryState.length > 0 ? (
       <>
         {purchaseHistoryState.map((item, i) => (
           <div key={i} className="account-history-card my-3">
@@ -59,6 +60,18 @@ const MyOrders = () => {
           </div>
         ))}
       </>
+    ) : (
+      <div
+        style={{ minHeight: "300px" }}
+        className="container layout-background py-2 text-center"
+      >
+        <h3>No orders yet</h3>
+        <button className="my-3 btn product-btn">
+          <Link className="jumbotron-link-no-style" to="/shop">
+            Start shopping
+          </Link>
+        </button>
+      </div>
     );
 
   return (

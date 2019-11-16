@@ -32,9 +32,8 @@ const ShopMain = () => {
         <h1 className="jumbotron-header mb-4">Choose a category</h1>
         {categories.map((c, i) => (
           <Link
-            style={{ width: "20%" }}
             key={i}
-            className="jumbotron-link-no-style btn product-btn mx-3"
+            className="jumbotron-link-no-style btn product-btn shop-button-custom"
             onClick={() => handleSetSubCategory(c._id, c.name)}
             to={`/shop/${c._id}`}
           >

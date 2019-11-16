@@ -13,6 +13,9 @@
   top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
+  @media only screen and (max-width: 990px) {
+    font-size: 20px;
+  }
 }
 
 .shop-sorting-div {
@@ -34,6 +37,9 @@
   }
   &:active {
     background-color: $color-gray-dark;
+  }
+  @media only screen and (max-width: 990px) {
+    width: 69px;
   }
 }
 

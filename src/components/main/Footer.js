@@ -20,7 +20,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-2">
+          <div className="col-2 hide-footer">
             <ul className="footer-list pt-4">
               Services
               <li className="footer-list-item">
@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-2">
+          <div className="col-2 hide-footer">
             <ul className="footer-list pt-4">
               <span>information</span>
               <li className="footer-list-item">
@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-2">
+          <div className="col-2 hide-footer">
             <ul className="footer-list pt-4">
               <span>work with us</span>
               <li className="footer-list-item">
@@ -75,7 +75,7 @@ const Footer = () => {
               <span>
                 <FaFacebook className="footer-social-icons footer-social-icons--facebook pr-1" />
               </span>
-              <span className="footer-social-icons footer-social-icons--instagram pl-2 ">
+              <span className="footer-social-icons footer-social-icons--instagram ">
                 <img
                   className="instagram-image"
                   alt="instagram icon"

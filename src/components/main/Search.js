@@ -20,12 +20,7 @@ const Search = () => {
           type="search"
           value={searchState.search}
           placeholder="Search"
-          style={{
-            height: "34px",
-            width: "588px",
-            borderRadius: "20px",
-            borderColor: "#1c252a"
-          }}
+          className="search-bar"
         />
         <button id="search-button" className="btn-searchbar">
           <FaSearch

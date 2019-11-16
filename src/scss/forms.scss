@@ -4,6 +4,9 @@
 }
 .form-width-custom {
   width: 50%;
+  @media only screen and (max-width: 990px) {
+    width: 100%;
+  }
 }
 .custom-auth-form {
   width: 80%;

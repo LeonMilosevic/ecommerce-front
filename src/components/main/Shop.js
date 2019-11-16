@@ -82,6 +82,7 @@ const Shop = () => {
     subCategoryProducts.checkedColor,
     subCategoryProducts.sort
   ]);
+
   // ===DROPDOWN UI---
   const dropdown = () => {
     return (
@@ -245,7 +246,7 @@ const Shop = () => {
               Brand
             </Dropdown.Toggle>
 
-            <Dropdown.Menu className="shop-dropdown-custom">
+            <Dropdown.Menu id="brand-dropdown" className="shop-dropdown-custom">
               {subCategoryProducts.populateBrand.map((item, i) => (
                 <li key={i} className="shop-dropdown-custom--item">
                   <div className="checkbox-div">

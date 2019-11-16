@@ -51,10 +51,13 @@ const Product = props => {
   const productDisplay = () => (
     <>
       <div className="row mt-3">
-        <div className="col-6">
+        <div className="col-lg-6 col-sm-12 col-md-6">
           <div className="product-grid-container">
             {singleProductState.photoUrl.map((img, i) => (
-              <div key={i} className="product-grid-container-div">
+              <div
+                key={i}
+                className={`product-grid-container-div product-grid-container-div-${i}`}
+              >
                 <img
                   className="product-grid-container--images"
                   src={img}
@@ -74,7 +77,7 @@ const Product = props => {
             </div>
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-md-6 col-lg-6 col-sm-12 media-text-center">
           <h2 className="product-header">{singleProductState.name}</h2>
           <h2
             className={
@@ -105,7 +108,7 @@ const Product = props => {
         </div>
       </div>
       <div style={{ width: "80%" }} className="row mx-auto my-5">
-        <div className="col">
+        <div className="col-lg-4 col-md-4 col-sm-12 media-text-center">
           <h3 className="product-header-information">Product information</h3>
           <h6 className="product-subheader">{singleProductState.name}</h6>
 
@@ -113,11 +116,11 @@ const Product = props => {
             <li className="ml-4">{singleProductState.about}</li>
           </ul>
         </div>
-        <div className="col">
+        <div className="col-lg-4 col-md-4 col-sm-12 media-text-center">
           <h3 className="product-header-information">About product</h3>
           <p className="product-p">{singleProductState.instructions}</p>
         </div>
-        <div className="col">
+        <div className="col-lg-4 col-md-4 col-sm-12 media-text-center">
           <h3 className="product-header-information">About brand</h3>
           <p className="product-p">{singleProductState.brandDescription}</p>
         </div>
@@ -128,7 +131,23 @@ const Product = props => {
     dots: false,
     infinite: true,
     slidesToShow: 3,
-    slidesToScroll: 3
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 600, //at 600px wide, only 2 slides will show
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480, //at 480px wide, only one slide will show
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   };
   const relatedProductsDisplay = () => (
     <>
