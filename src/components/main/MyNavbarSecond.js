@@ -41,27 +41,6 @@ const MyNavbarSecond = () => {
             </div>
           </div>
         </Tab>
-        <Tab title="Man" eventKey="man">
-          <div style={{ padding: "0" }} className="tab-dropdown-custom">
-            <div style={{ padding: "0" }} className="container">
-              <nav style={{ padding: 0 }} className="navbar navbar-expand-lg">
-                {mans.map((m, i) => (
-                  <Link
-                    onClick={() =>
-                      handleSetSubCategory(m._id, m.name, m.category)
-                    }
-                    key={i}
-                    style={{ backgroundColor: "#595959" }}
-                    to={`/shop/${m._id}`}
-                    className="nav-custom-links nav-item nav-link"
-                  >
-                    {m.name}
-                  </Link>
-                ))}
-              </nav>
-            </div>
-          </div>
-        </Tab>
         <Tab title="Woman" eventKey="woman">
           <div style={{ padding: "0" }} className="tab-dropdown-custom">
             <div style={{ padding: "0" }} className="container">
@@ -77,6 +56,27 @@ const MyNavbarSecond = () => {
                     className="nav-custom-links nav-item nav-link"
                   >
                     {w.name}
+                  </Link>
+                ))}
+              </nav>
+            </div>
+          </div>
+        </Tab>
+        <Tab title="Man" eventKey="man">
+          <div style={{ padding: "0" }} className="tab-dropdown-custom">
+            <div style={{ padding: "0" }} className="container">
+              <nav style={{ padding: 0 }} className="navbar navbar-expand-lg">
+                {mans.map((m, i) => (
+                  <Link
+                    onClick={() =>
+                      handleSetSubCategory(m._id, m.name, m.category)
+                    }
+                    key={i}
+                    style={{ backgroundColor: "#595959" }}
+                    to={`/shop/${m._id}`}
+                    className="nav-custom-links nav-item nav-link"
+                  >
+                    {m.name}
                   </Link>
                 ))}
               </nav>

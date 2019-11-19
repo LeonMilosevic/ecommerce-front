@@ -145,15 +145,18 @@ const Checkout = () => {
     <div>
       {!isAuthenticated() ? (
         <>
-          <p className="checkout-auth-redirect-p">
-            To track your order please{" "}
-            <Link className="product-link" to="/signin">
-              Sign in
-            </Link>{" "}
-            or{" "}
-            <Link className="product-link" to="/signup">
-              Sign up
-            </Link>
+          <p className="checkout-auth-redirect-p text-center">
+            To finish your order please{" "}
+            <div className="text-center">
+              {" "}
+              <Link className="product-link" to="/signin">
+                Sign in
+              </Link>{" "}
+              or{" "}
+              <Link className="product-link" to="/signup">
+                Sign up
+              </Link>
+            </div>
           </p>
           <Facebook />
         </>

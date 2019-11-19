@@ -95,10 +95,20 @@ const ShopState = props => {
   const loadMore = () => {
     let toSkip = state.skip + state.limit;
 
+    let params;
+
+    if (
+      subCategory.subCategoryName === "Man" ||
+      subCategory.subCategoryName === "Women"
+    ) {
+      params = { category: subCategory.subCategoryId };
+    } else {
+      params = { subCategory: subCategory.subCategoryId };
+    }
+
     setState({ ...state, loading: true });
-    getProductsBySub(toSkip, state.limit, {
-      subCategory: subCategory.subCategoryId
-    }).then(data => {
+    getProductsBySub(toSkip, state.limit, params).then(data => {
+      console.log(data);
       if (data.error)
         return setState({ ...state, loading: false, error: data.error });
 

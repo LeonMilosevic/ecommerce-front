@@ -392,40 +392,62 @@ const AdminState = props => {
     e.preventDefault();
 
     setProduct({ ...product, error: "", loading: true });
-
-    createProduct(user._id, token, product.formData).then(data => {
-      if (data.error)
-        return setProduct({
-          ...product,
-          error: data.error,
-          loading: false,
-          success: false
-        });
-
-      setProduct({
+    if (
+      product.name == "" ||
+      product.about == "" ||
+      product.price == "" ||
+      product.quantity == "" ||
+      product.color == "" ||
+      product.size == "" ||
+      product.instructions == "" ||
+      product.brand == "" ||
+      product.brandDescription == "" ||
+      product.photo1 == "" ||
+      product.photo2 == "" ||
+      product.photo3 == "" ||
+      product.photo4 == "" ||
+      product.sold == ""
+    )
+      return setProduct({
         ...product,
-        loading: false,
-        name: "",
-        about: "",
-        price: "",
-        category: "",
-        subCategory: "",
-        quantity: "",
-        color: "",
-        size: "",
-        instructions: "",
-        brand: "",
-        brandDescription: "",
-        photo1: "",
-        photo2: "",
-        photo3: "",
-        photo4: "",
-        selection: "",
-        sold: "",
-        success: true,
-        error: ""
+        error: "Please fill in all fields",
+        loading: false
       });
-    });
+    createProduct(user._id, token, product.formData)
+      .then(data => {
+        if (data.error)
+          return setProduct({
+            ...product,
+            error: data.error,
+            loading: false,
+            success: false
+          });
+
+        setProduct({
+          ...product,
+          loading: false,
+          name: "",
+          about: "",
+          price: "",
+          category: "",
+          subCategory: "",
+          quantity: "",
+          color: "",
+          size: "",
+          instructions: "",
+          brand: "",
+          brandDescription: "",
+          photo1: "",
+          photo2: "",
+          photo3: "",
+          photo4: "",
+          selection: "",
+          sold: "",
+          success: true,
+          error: ""
+        });
+      })
+      .catch(error => console.log(error));
   };
 
   const clickSubmitUpdateProduct = (e, productId) => {

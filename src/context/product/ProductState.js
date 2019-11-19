@@ -123,7 +123,7 @@ const ProductState = props => {
   // query functions for newest and on sale
   const loadProductsByOnSale = () => {
     setState({ ...state, loading: true });
-    getProducts("onSale", 6)
+    getProducts("onSale", 8)
       .then(data => {
         if (data.error)
           return setState({ ...state, error: data.error, loading: false });
@@ -163,7 +163,7 @@ const ProductState = props => {
 
   const loadProductsByArrival = () => {
     setState({ ...state, loading: true });
-    getProducts("createdAt", 6)
+    getProducts("createdAt", 8)
       .then(data => {
         if (data.error)
           return setState({ ...state, error: data.error, loading: false });

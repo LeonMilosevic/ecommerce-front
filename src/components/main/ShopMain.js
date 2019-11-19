@@ -25,7 +25,7 @@ const ShopMain = () => {
       </Breadcrumb>
       <div
         style={{
-          background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://res.cloudinary.com/clothify/image/upload/v1571160597/1mbtest_hyebrz.jpg)`
+          background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(https://res.cloudinary.com/clothify/image/upload/v1574116778/wish_fnfavj.jpg)`
         }}
         className="jumbotron jumbotron-background"
       >
@@ -41,6 +41,7 @@ const ShopMain = () => {
           </Link>
         ))}
       </div>
+      <div style={{ height: "300px" }}></div>
     </div>
   );
 };

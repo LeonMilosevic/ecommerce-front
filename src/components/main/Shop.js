@@ -49,8 +49,8 @@ const Shop = () => {
         category: subCategory.subCategoryId
       };
     } else if (
-      subCategory.subCategoryName === "Winter Collection" ||
-      subCategory.subCategoryName === "Summer Collection" ||
+      subCategory.subCategoryName === "Summer vibes" ||
+      subCategory.subCategoryName === "Casual Collection" ||
       subCategory.subCategoryName === "Going out collecection"
     ) {
       searchParams = {

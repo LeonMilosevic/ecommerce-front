@@ -85,7 +85,6 @@ const AuthState = props => {
           loading: false
         });
 
-      window.location.reload();
       authenticate(data, () => {
         setValues({
           ...values,
@@ -118,9 +117,12 @@ const AuthState = props => {
     if (redirectToRefferer) {
       if (isAuthenticated().user && isAuthenticated().user.role === 1)
         return <Redirect to="/admin/dashboard" />;
-      else return <Redirect to="/user/account" />;
+      else {
+        window.location.reload();
+        return <Redirect to="/user/account" />;
+      }
     }
-    if (isAuthenticated()) return <Redirect to="/user/account" />;
+    if (isAuthenticated()) return <Redirect to="/" />;
   };
 
   const isLoading = () => loading && <Spinner />;

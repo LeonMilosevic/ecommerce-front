@@ -258,7 +258,16 @@ const MyNavbar = ({ history }) => {
               </ul>
             </div>
 
-            <Nav>
+            <Nav className="nav-links-block">
+              {/*check if signed in and display nav*/}
+              {!isAuthenticated() && notSignedIn()}
+              {isAuthenticated() &&
+                isAuthenticated().user.role === 0 &&
+                signedIn()}
+              {/* check if admin */}
+              {isAuthenticated() &&
+                isAuthenticated().user.role === 1 &&
+                isAdmin()}
               <Link
                 style={isActive(history, "/wishlist")}
                 className="right-links"
@@ -266,6 +275,7 @@ const MyNavbar = ({ history }) => {
               >
                 <FaHeart style={{ fontSize: "26px", color: "#e95b4e" }} />
               </Link>
+
               <Link
                 style={isActive(history, "/cart")}
                 className="right-links"
@@ -276,15 +286,6 @@ const MyNavbar = ({ history }) => {
                 </sup>
                 <FaShoppingBag style={{ fontSize: "26px" }} />
               </Link>
-              {/*check if signed in and display nav*/}
-              {!isAuthenticated() && notSignedIn()}
-              {isAuthenticated() &&
-                isAuthenticated().user.role === 0 &&
-                signedIn()}
-              {/* check if admin */}
-              {isAuthenticated() &&
-                isAuthenticated().user.role === 1 &&
-                isAdmin()}
             </Nav>
           </Navbar.Collapse>
         </Container>

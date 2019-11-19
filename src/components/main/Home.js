@@ -34,9 +34,8 @@ const Home = () => {
 
         <Hero
           bgimg={
-            "https://res.cloudinary.com/clothify/image/upload/v1571160597/1mbtest_hyebrz.jpg"
+            "https://res.cloudinary.com/clothify/image/upload/v1574095600/home-img_onlonc.png"
           }
-          logo={"logo needs to go here"}
         />
         <h2 className="mb-3 text-center header-home">New In</h2>
         {isLoading()}

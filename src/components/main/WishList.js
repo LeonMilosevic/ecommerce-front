@@ -19,29 +19,32 @@ const WishList = () => {
   }, []);
 
   const emptyBag = () => (
-    <Layout
-      bgimg={`https://res.cloudinary.com/clothify/image/upload/v1571160597/1mbtest_hyebrz.jpg`}
-      header={"My favorites"}
-      // @ts-ignore
-      icon={<FaHeartBroken style={{ fontSize: "60px", color: "#e95b4e" }} />}
-      name={"Your wishlist is empty"}
-      // @ts-ignore
-      link={
-        <p className="mb-4">
-          <Link to="/cart" className="jumbotron-link">
-            My cart
-          </Link>
-        </p>
-      }
-      // @ts-ignore
-      buttonName={
-        <button className="my-3 btn product-btn">
-          <Link className="jumbotron-link-no-style" to="/shop">
-            Start shopping
-          </Link>
-        </button>
-      }
-    />
+    <>
+      <Layout
+        bgimg={`https://res.cloudinary.com/clothify/image/upload/v1574116778/wish_fnfavj.jpg`}
+        header={"My favorites"}
+        // @ts-ignore
+        icon={<FaHeartBroken style={{ fontSize: "60px", color: "#e95b4e" }} />}
+        name={"Your wishlist is empty"}
+        // @ts-ignore
+        link={
+          <p className="mb-4">
+            <Link to="/cart" className="jumbotron-link">
+              My cart
+            </Link>
+          </p>
+        }
+        // @ts-ignore
+        buttonName={
+          <button className="my-3 btn product-btn">
+            <Link className="jumbotron-link-no-style" to="/shop">
+              Start shopping
+            </Link>
+          </button>
+        }
+      />
+      <div style={{ height: "100px" }}></div>
+    </>
   );
 
   const showItems = () => {
@@ -49,7 +52,7 @@ const WishList = () => {
       <>
         <Layout
           jumboPadding={"2%"}
-          bgimg={`https://res.cloudinary.com/clothify/image/upload/v1571160597/1mbtest_hyebrz.jpg`}
+          bgimg={`https://res.cloudinary.com/clothify/image/upload/v1574116778/wish_fnfavj.jpg`}
           header={"My wishlist"}
           // @ts-ignore
           icon={<FaHeart style={{ fontSize: "60px", color: "#e95b4e" }} />}

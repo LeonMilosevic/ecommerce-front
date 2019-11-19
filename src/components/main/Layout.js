@@ -15,7 +15,8 @@ const Layout = ({
       className="jumbotron jumbotron-background"
       style={{
         padding: jumboPadding,
-        background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${bgimg})`
+        background: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${bgimg}) no-repeat fixed center`,
+        backgroundSize: "cover"
       }}
     >
       <h1 className="jumbotron-header mb-4">{header}</h1>

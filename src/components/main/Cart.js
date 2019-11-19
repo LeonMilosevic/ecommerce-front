@@ -40,29 +40,34 @@ const Cart = () => {
   };
 
   const emptyBag = () => (
-    <Layout
-      bgimg={`https://res.cloudinary.com/clothify/image/upload/v1571160597/1mbtest_hyebrz.jpg`}
-      header={"My bag"}
-      // @ts-ignore
-      icon={<FaShoppingBasket style={{ fontSize: "60px", color: "#84bacd" }} />}
-      name={"Your shopping bag is empty"}
-      // @ts-ignore
-      link={
-        <p className="mb-4">
-          <Link to="/wishlist" className="jumbotron-link">
-            My wishlist
-          </Link>
-        </p>
-      }
-      // @ts-ignore
-      buttonName={
-        <button className="my-3 btn product-btn">
-          <Link className="jumbotron-link-no-style" to="/shop">
-            Start shopping
-          </Link>
-        </button>
-      }
-    />
+    <>
+      <Layout
+        bgimg={`https://res.cloudinary.com/clothify/image/upload/v1574116544/cart_ninize.jpg`}
+        header={"My bag"}
+        // @ts-ignore
+        icon={
+          <FaShoppingBasket style={{ fontSize: "60px", color: "#84bacd" }} />
+        }
+        name={"Your shopping bag is empty"}
+        // @ts-ignore
+        link={
+          <p className="mb-4">
+            <Link to="/wishlist" className="jumbotron-link">
+              My wishlist
+            </Link>
+          </p>
+        }
+        // @ts-ignore
+        buttonName={
+          <button className="my-3 btn product-btn">
+            <Link className="jumbotron-link-no-style" to="/shop">
+              Start shopping
+            </Link>
+          </button>
+        }
+      />
+      <div style={{ height: "100px" }}></div>
+    </>
   );
 
   const showItems = () => {
@@ -70,7 +75,7 @@ const Cart = () => {
       <>
         <Layout
           jumboPadding={"2%"}
-          bgimg={`https://res.cloudinary.com/clothify/image/upload/v1571160597/1mbtest_hyebrz.jpg`}
+          bgimg={`https://res.cloudinary.com/clothify/image/upload/v1574116544/cart_ninize.jpg`}
           header={"My bag"}
           // @ts-ignore
           icon={
