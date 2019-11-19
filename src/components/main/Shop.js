@@ -150,7 +150,9 @@ const Shop = () => {
               {subCategoryProducts.populateSize.map((item, i) => (
                 <li key={i} className="shop-dropdown-custom--item">
                   <div className="checkbox-div">
-                    <label className={`checkbox-custom-label`}>
+                    <label
+                      className={`checkbox-uppercase checkbox-custom-label`}
+                    >
                       <span className="ml-2">{item}</span>
                       <input
                         name={`${item}`}

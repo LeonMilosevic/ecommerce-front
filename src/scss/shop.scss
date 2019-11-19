@@ -116,6 +116,10 @@
   text-transform: capitalize;
 }
 
+.checkbox-uppercase {
+  text-transform: uppercase;
+}
+
 .checkbox-active {
   background-color: $color-blue-light;
   color: $color-gray-light;
