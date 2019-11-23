@@ -38,6 +38,7 @@ const Card = ({ product }) => {
         backgroundImage: `url(${product.photoUrl[0]})`,
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
+        backgroundPosition: "center",
         height: "290px"
       }}
       className="card"
